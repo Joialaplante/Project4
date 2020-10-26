@@ -1,32 +1,30 @@
 import random
+# Joia LaPlante
 
 
 # the main function asks the user what file they would like to open
 def main():
     name = (input("What file would you like to open?"))
-    display_fortunes()
+    fortunes(name)
 
 
 # this fortunes function reads the file and prints the sayings
 def fortunes(name):
     file = open(name, 'r')
     all_of_file = file.readlines()
-    print(name)
+    random_line = random.choice(all_of_file)
+    print(random_line)
 
 
-# this display function
+# display function
 def display_fortunes():
     more_fortunes = (input("Would you like more fortunes?"))
+    print(more_fortunes)
     yes = "yes"
     yes.startswith("ye")
-    lower().startswith()
-    while more_fortunes == "yes":
-        print(name)
-
-
-
+    if more_fortunes == "yes":
+        print(random_line)
 
 
 main()
-fortunes()
 display_fortunes()
